@@ -20,7 +20,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i: i + 4]
+                group = mask_in_number[i : i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -41,7 +41,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i: i + 4]
+                group = mask_in_number[i : i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -62,7 +62,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i: i + 4]
+                group = mask_in_number[i : i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -83,7 +83,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i: i + 4]
+                group = mask_in_number[i : i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -104,7 +104,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i: i + 4]
+                group = mask_in_number[i : i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -117,7 +117,7 @@ def mask_account_card(card_and_account_number: str) -> str:
     elif card_name_score in card_and_account_number:
 
         # Функция по маске счета.
-        def get_mask_account(card_and_account_number):
+        def get_mask_account(card_and_account_number: str) -> str:
             """Функция, которая укорачивает и маскирует номер счета"""
 
             score = card_and_account_number[0:5]
@@ -133,7 +133,7 @@ mask_card_number = mask_account_card("Счет 73654108430135874305")
 print(mask_card_number)
 
 
-def get_date(dd_mm_yyyy: [str]) -> str:
+def get_date(dd_mm_yyyy: str) -> str:
     """Функция, которая переводит даты в формат ДД.ММ.ГГГГ."""
     result = ".".join([dd_mm_yyyy[8:10], dd_mm_yyyy[5:7], dd_mm_yyyy[0:4]])
     return result
