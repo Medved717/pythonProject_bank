@@ -126,7 +126,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             result = score + score_result
             return result
 
-        return get_mask_account(card_and_account_number)
+    return get_mask_account(card_and_account_number)
 
 
 mask_card_number = mask_account_card("Счет 73654108430135874305")
