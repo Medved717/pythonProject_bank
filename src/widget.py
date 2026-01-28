@@ -20,7 +20,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i : i + 4]
+                group = mask_in_number[i: i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -41,7 +41,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i : i + 4]
+                group = mask_in_number[i: i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -62,7 +62,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i : i + 4]
+                group = mask_in_number[i: i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -83,7 +83,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i : i + 4]
+                group = mask_in_number[i: i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
@@ -104,7 +104,7 @@ def mask_account_card(card_and_account_number: str) -> str:
             mask_in_number = card_number.replace(card_number[6:12], "XXXXXX")
             groups = []
             for i in range(0, len(mask_in_number), 4):
-                group = mask_in_number[i : i + 4]
+                group = mask_in_number[i: i + 4]
                 groups.append(group)
 
             number_result = " ".join(groups)
