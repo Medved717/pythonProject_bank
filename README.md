@@ -12,6 +12,6 @@
 ```
 git clone https://github.com/Medved717/pythonProject_bank/tree/develop
 ```
-2. Установите зависимости:
+2. Установите зависимости: 
 
 
