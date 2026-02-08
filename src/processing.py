@@ -1,29 +1,38 @@
-def filter_by_state(list_state: [list]) -> list:
-
+def filter_by_state(list_state: list) -> list:
     """Функция, которая принимает список словарей и выдает новый список словарей,
-    в которых присутствует значение 'EXECUTED'"""
+    в которых присутствует значение 'EXECUTED'."""
 
     list_excuted = []
     for i in list_state:
-        if i['state'] == 'EXECUTED':
+        if i["state"] == "EXECUTED":
             list_excuted.append(i)
 
     return list_excuted
 
 
-result_excuted = filter_by_state([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
-     {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
-     {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
-     {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}])
+result_excuted = filter_by_state(
+    [
+        {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+        {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+        {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+        {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
+    ]
+)
 print(result_excuted)
 
 
 def sort_by_date(filter_date: list) -> list:
+    """Функция, которая сортирует список словарей по по дате в порядке убывания."""
+
+    return sorted(filter_date, key=lambda x: x["date"], reverse=True)
 
 
-
-result =sort_by_date([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
-     {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
-     {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
-     {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}])
+result_sort = sort_by_date(
+    [
+        {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+        {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+        {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+        {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
+    ]
+)
 print(result_sort)
