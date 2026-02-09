@@ -4,7 +4,7 @@ def get_mask_card_number(card_number: str) -> str:
     mask_number = card_number.replace(card_number[6:12], "XXXXXX")
     groups = []
     for i in range(0, len(mask_number), 4):
-        group = mask_number[i : i + 4]
+        group = mask_number[i: i + 4]
         groups.append(group)
 
     result = " ".join(groups)
