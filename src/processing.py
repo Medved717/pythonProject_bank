@@ -1,4 +1,4 @@
-def filter_by_state(list_of_transactions: list, status : str = "EXECUTED") -> list:
+def filter_by_state(list_of_transactions: list, status: str = "EXECUTED") -> list:
     """Функция, которая принимает список словарей и выдает новый список словарей,
     в которых присутствует значение 'EXECUTED'."""
 
