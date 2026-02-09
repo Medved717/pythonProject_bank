@@ -1,13 +1,13 @@
-def filter_by_state(list_state: list) -> list:
+def filter_by_state(list_of_transactions: list, status : str = "EXECUTED") -> list:
     """Функция, которая принимает список словарей и выдает новый список словарей,
     в которых присутствует значение 'EXECUTED'."""
 
-    list_excuted = []
-    for i in list_state:
-        if i["state"] == "EXECUTED":
-            list_excuted.append(i)
+    list_executed = []
+    for list_state in list_of_transactions:
+        if list_state["state"] == status:
+            list_executed.append(list_state)
 
-    return list_excuted
+    return list_executed
 
 
 result_excuted = filter_by_state(
