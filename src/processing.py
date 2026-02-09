@@ -21,10 +21,10 @@ result_excuted = filter_by_state(
 print(result_excuted)
 
 
-def sort_by_date(filter_date: list) -> list:
+def sort_by_date(filter_date: list[dict], sorted_list: bool = True) -> list[dict]:
     """Функция, которая сортирует список словарей по по дате в порядке убывания."""
 
-    return sorted(filter_date, key=lambda x: x["date"], reverse=True)
+    return sorted(filter_date, key=lambda x: x["date"], reverse=sorted_list)
 
 
 result_sort = sort_by_date(
